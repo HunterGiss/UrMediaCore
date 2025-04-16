@@ -1,8 +1,7 @@
 plugins {
     id 'application'
     id 'java'
-
-    // Adding the Lombok plugin so we can use annotations
+    id 'org.springframework.boot' version '3.1.0'
     id 'io.freefair.lombok' version '8.12'
 }
 
@@ -21,7 +20,8 @@ ext {
 }
 
 dependencies {
-    implementation project(':utilities')
+    implementation project(':controller')
+    implementation project(':service')
 
     implementation "org.apache.commons:commons-text:$apacheCommonsVersion"
 
@@ -54,4 +54,10 @@ java {
 application {
     // Define the main class for the application.
     mainClass = 'com.urmedia.app.App'
+}
+
+
+tasks.named('test') {
+    // Use JUnit Platform for unit tests.
+    useJUnitPlatform()
 }

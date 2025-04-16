@@ -11,4 +11,4 @@ plugins {
 }
 
 rootProject.name = 'UrMediaCore'
-include('app', 'list', 'utilities')
+include('app', 'service', 'controller', 'database', 'streaming', 'models')

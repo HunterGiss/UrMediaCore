@@ -3,9 +3,9 @@
  */
 
 plugins {
-    id 'buildlogic.java-library-conventions'
+    id 'java'
 }
 
 dependencies {
-    api project(':list')
+    implementation project(':models')
 }
